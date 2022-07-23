@@ -1,0 +1,9 @@
+env=Environment(CPPPATH=['/usr/include/boost/', 'include/'],
+    CPPDEFINES=[],
+    LIBS=[],
+    SCONS_CXX_STANDARD="c++17"
+    )
+
+
+env.Program('main', Glob('src/*.cpp'))   
+# Program('main.cpp')
