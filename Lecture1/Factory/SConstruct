@@ -1,7 +1,7 @@
 env=Environment(CPPPATH=['/usr/include/boost/', 'include/'],
     CPPDEFINES=[],
     LIBS=[],
-    SCONS_CXX_STANDARD="c++17"
+    SCONS_CXX_STANDARD="c++20"
     )
 
 

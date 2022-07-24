@@ -7,7 +7,7 @@
 class TxtReportCreator : public ReportCreator
 {
     public:
-         Report* factoryMethod() const override;
+         Report* factoryMethod(std::vector<FileInfo> files_parameters) const override;
 };
 
 #endif // TXTREPORTCREATOR_H

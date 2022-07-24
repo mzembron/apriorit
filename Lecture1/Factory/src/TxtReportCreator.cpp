@@ -1,6 +1,6 @@
 #include "TxtReportCreator.h"
 
-Report* TxtReportCreator::factoryMethod() const 
+Report* TxtReportCreator::factoryMethod(std::vector<FileInfo> files_parameters) const 
     {
         return new TxtReport();
     }
