@@ -6,6 +6,7 @@
 #include <ctime>
 #include <iomanip>
 #include <fstream>
+#include <boost/json/src.hpp>
 #include "ReportCreator.h" 
 #include "JsonReportCreator.h"
 

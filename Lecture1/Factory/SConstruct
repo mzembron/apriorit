@@ -1,4 +1,4 @@
-env=Environment(CPPPATH=['/usr/include/boost/', 'include/'],
+env=Environment(CPPPATH=['/usr/local/include/boost_1_79_0/', 'include/'],
     CPPDEFINES=[],
     LIBS=[],
     SCONS_CXX_STANDARD="c++20"
