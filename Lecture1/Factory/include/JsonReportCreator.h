@@ -7,7 +7,7 @@
 class JsonReportCreator : public ReportCreator
 {
     public:
-         Report* factoryMethod(std::vector<FileInfo> files_parameters) const override;
+         Report* factoryMethod(const std::vector<FileInfo>& files_parameters) const override;
 
 };
 

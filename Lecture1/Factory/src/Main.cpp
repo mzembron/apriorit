@@ -8,7 +8,7 @@
 #include <fstream>
 #include <boost/json/src.hpp>
 #include "ReportCreator.h" 
-#include "JsonReportCreator.h"
+#include "TxtReportCreator.h"
 
 namespace fs = std::filesystem;
 
@@ -38,7 +38,7 @@ std::time_t to_time_t(TP tp)
 
 int main()
 {
-    ReportCreator* creator = new JsonReportCreator();
+    ReportCreator* creator = new TxtReportCreator();
     ClientCode(*creator);
     std::cout << std::endl;
 //     std::string path = "..";

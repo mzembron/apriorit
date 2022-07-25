@@ -15,6 +15,9 @@ std::string ReportCreator::generateReport() const
         std::string path = "..";
         std::vector<FileInfo> files_parameters= getFilesParameters(path);
         std::unique_ptr<Report> report(this -> factoryMethod(files_parameters));
+        // std::cout << std::endl;
+        // std::cout << files_parameters[1].getFileParameters()[0].second;
+        // std::cout << std::endl;
         std::string result = "Output report is: " + report -> returnReport();
         // delete report;
         return result;
@@ -28,17 +31,17 @@ std::vector<FileInfo> ReportCreator::getFilesParameters(std::string directory_pa
         {
             if(entry.is_directory() == false) 
             {
-                FileInfo file_info;
-                std::cout << entry.path() << std::endl;
-                file_info.path = entry.path();
-                std::cout << entry.path().filename() << std::endl;
-                file_info.name = entry.path().filename();
-                auto ftime = entry.last_write_time();
-                std::time_t cftime = to_time_t(ftime);
-                std::cout << "File write time is " << std::asctime(std::localtime(&cftime)) << '\n';
-                file_info.last_write_time = std::asctime(std::localtime(&cftime));
-                std::cout << entry.file_size() << " B" << std::endl;
-                file_info.size = entry.file_size();
+                FileInfo file_info(entry);
+                // std::cout << entry.path() << std::endl;
+                // file_info.path = entry.path();
+                // std::cout << entry.path().filename() << std::endl;
+                // file_info.name = entry.path().filename();
+                // auto ftime = entry.last_write_time();
+                // std::time_t cftime = to_time_t(ftime);
+                // std::cout << "File write time is " << std::asctime(std::localtime(&cftime)) << '\n';
+                // file_info.last_write_time = std::asctime(std::localtime(&cftime));
+                // std::cout << entry.file_size() << " B" << std::endl;
+                // file_info.size = entry.file_size();
                 files_info.push_back(file_info);
             }        
         }

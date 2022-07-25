@@ -20,7 +20,7 @@ class ReportCreator
 {
     public:
         virtual ~ReportCreator(){};
-        virtual Report* factoryMethod(std::vector<FileInfo> files_parameters) const = 0;
+        virtual Report* factoryMethod(const std::vector<FileInfo>& files_parameters) const = 0;
         std::string generateReport() const;
     private:
         std::vector<FileInfo> getFilesParameters(std::string directory_path) const;

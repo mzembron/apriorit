@@ -15,6 +15,10 @@ class TxtReport : public Report
 {
     public:
         std::string returnReport() const override;
+        void setReport(std::string content);
+    
+    private:
+        std::string _report_content;
 };
 
 #endif // TXTREPORT_H
