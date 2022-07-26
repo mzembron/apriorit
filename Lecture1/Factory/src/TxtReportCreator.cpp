@@ -1,11 +1,11 @@
 #include "TxtReportCreator.h"
 
-Report* TxtReportCreator::factoryMethod(const std::vector<FileInfo>& files_parameters) const 
+std::unique_ptr<Report> TxtReportCreator::factoryMethod(const std::vector<FileInfo>& files_parameters) const 
     {   
         std::string report_content = prepareContent(files_parameters);
-        //smart ptr
-        std::cout<<report_content<<std::endl;
-        return new TxtReport();
+        std::unique_ptr<TxtReport> txt_report(new TxtReport());
+        txt_report -> setReport(report_content);
+        return txt_report;
     }
 
 

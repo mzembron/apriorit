@@ -1,5 +1,5 @@
-#ifndef TXTREPORT_H
-#define TXTNREPORT_H
+#ifndef CSVREPORT_H
+#define CSVNREPORT_H
 
 
 #include "Report.h"
@@ -11,7 +11,7 @@
 */
 
 
-class TxtReport : public Report 
+class CsvReport : public Report 
 {
     public:
         std::string returnReport() const override;
@@ -20,4 +20,4 @@ class TxtReport : public Report
         std::string _report_content;
 };
 
-#endif // TXTREPORT_H
+#endif // CSVREPORT_H

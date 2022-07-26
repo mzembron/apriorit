@@ -17,11 +17,12 @@ FileInfo::FileInfo(std::filesystem::directory_entry entry) : _size(entry.file_si
     _last_write_time = std::asctime(std::localtime(&cftime));
 }
 
-file_parameters FileInfo::getFileParameters()
+file_parameters FileInfo::getFileParameters() const
 {
     file_parameters file_info = {};
-    file_info.push_back(file_descripion_param_pair("Path", _path));
     file_info.push_back(file_descripion_param_pair("Name", _name));
+    file_info.push_back(file_descripion_param_pair("Path", _path));
+    file_info.push_back(file_descripion_param_pair("Size", static_cast<std::stringstream>(std::stringstream() << _size).str() + " B"));
     file_info.push_back(file_descripion_param_pair("Last write time", _last_write_time));
     return file_info;
 }

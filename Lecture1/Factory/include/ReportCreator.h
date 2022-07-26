@@ -8,8 +8,11 @@
 #include <filesystem>
 #include <vector>
 #include <memory>
+#include <utility>
+#include <stdexcept>
 #include "FileInfo.h"
 #include "Report.h"
+
 
 /**
 * The RaportCreator class is responsible for returning an
@@ -20,8 +23,8 @@ class ReportCreator
 {
     public:
         virtual ~ReportCreator(){};
-        virtual Report* factoryMethod(const std::vector<FileInfo>& files_parameters) const = 0;
-        std::string generateReport() const;
+        virtual std::unique_ptr<Report> factoryMethod(const std::vector<FileInfo>& files_parameters) const = 0;
+        std::string generateReport(std::string dir_path) const;
     private:
         std::vector<FileInfo> getFilesParameters(std::string directory_path) const;
 };

@@ -7,6 +7,7 @@
 #include <variant>
 #include <chrono>
 #include <ctime>
+#include <sstream>
 
 typedef std::pair<std::string, std::string> file_descripion_param_pair;
 // typedef std::vector<std::pair<std::string, std::any>> file_parameters;
@@ -16,7 +17,7 @@ class FileInfo
 {
     public:
         FileInfo(std::filesystem::directory_entry entry);
-        file_parameters getFileParameters();
+        file_parameters getFileParameters() const;
     private:
         std::uintmax_t _size;
         std::string _path;

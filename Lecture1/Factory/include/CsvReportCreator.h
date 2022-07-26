@@ -1,5 +1,5 @@
-#ifndef TXTREPORTCREATOR_H
-#define TXTREPORTCREATOR_H
+#ifndef CSVREPORTCREATOR_H
+#define CSVREPORTCREATOR_H
 
 #include <iostream>
 #include <memory>
@@ -7,13 +7,14 @@
 #include "TxtReport.h"
 
 
-class TxtReportCreator : public ReportCreator
+class CsvReportCreator : public ReportCreator
 {
     public:
         std::unique_ptr<Report> factoryMethod(const std::vector<FileInfo>& files_parameters) const override;
         
     private:
         std::string prepareContent(const std::vector<FileInfo>& files_parameters) const;
+        std::string extractPrefix(const std::vector<FileInfo>& files_parameters) const;
 };
 
-#endif // TXTREPORTCREATOR_H
+#endif // CSVREPORTCREATOR_H
