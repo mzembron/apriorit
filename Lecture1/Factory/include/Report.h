@@ -11,7 +11,11 @@ class Report
 {
     public:
         virtual ~Report() {};
-        virtual std::string returnReport() const = 0;
+        virtual std::string getType() const = 0;
+        std::string returnReport() const;
+        void setReport(std::string content);
+    private:
+        std::string _report_content;
 };
 
 #endif // REPORT_H

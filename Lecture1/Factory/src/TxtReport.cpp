@@ -1,12 +1,17 @@
 #include "TxtReport.h" 
 
-std::string TxtReport::returnReport() const
+// std::string TxtReport::returnReport() const
+//     {
+//         return _report_content;
+//     }
+
+std::string TxtReport::getType() const
     {
-        return _report_content;
+        return "Txt";
     }
 
-void TxtReport::setReport(std::string content) 
-    {
-        _report_content = content;
-    }
+// void TxtReport::setReport(std::string content) 
+//     {
+//         _report_content = content;
+//     }
 

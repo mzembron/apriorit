@@ -13,7 +13,7 @@ std::string CsvReportCreator::prepareContent(const std::vector<FileInfo>& files_
     {
         std::string report_content = extractPrefix(files_parameters);
         
-        for (FileInfo file_info : files_parameters)
+        for (const FileInfo& file_info : files_parameters)
         {
             for (const file_descripion_param_pair& param_pair : file_info.getFileParameters() )
             {   
@@ -34,6 +34,7 @@ std::string CsvReportCreator::extractPrefix(const std::vector<FileInfo>& files_p
         {   
             prefix = prefix + param_pair.first + "; ";
         }
+        prefix = prefix + "\n";
     }
     return prefix;
 }

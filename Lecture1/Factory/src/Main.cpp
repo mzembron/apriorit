@@ -21,15 +21,12 @@ void getReports()
     
     for(auto const &element : report_creators)
     {
-        std::cout << "Raport: \n" << element ->generateReport(DIRECTORY_PATH);
+        std::cout << element ->generateReport(DIRECTORY_PATH)<< "\n \n";
     }
 }
 
 int main()
 {
-    
-    // std::unique_ptr<ReportCreator> creator(new CsvReportCreator());
-    // ClientCode(*creator);
     getReports();
     std::cout << std::endl;
 }

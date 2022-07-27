@@ -1,12 +1,20 @@
 #include "CsvReport.h" 
 
-std::string CsvReport::returnReport() const
+// std::string CsvReport::returnReport() const
+//     {
+//         return _report_content;
+//     }
+
+
+std::string CsvReport::getType() const
     {
-        return _report_content;
+        return "Csv";
     }
 
-void CsvReport::setReport(std::string content) 
-    {
-        _report_content = content;
-    }
+// void CsvReport::setReport(std::string content) 
+//     {
+//         _report_content = content;
+//     }
+
+
 

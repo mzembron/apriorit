@@ -14,7 +14,7 @@ std::string ReportCreator::generateReport(std::string dir_path) const
 
         std::vector<FileInfo> files_parameters= getFilesParameters(dir_path);
         std::unique_ptr<Report> report(std::move(this -> factoryMethod(files_parameters)));
-        std::string result = "Output report is: \n" + report -> returnReport();
+        std::string result = "Output " + report -> getType()  + " report is: \n" + report -> returnReport();
         return result;
     }
 

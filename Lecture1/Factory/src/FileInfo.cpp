@@ -22,7 +22,7 @@ FileInfo::FileInfo(std::filesystem::directory_entry entry) :  _path(entry.path()
     catch(std::exception& exception)
     {
         std::cout << "Cannot read last write time from: " << _name << std::endl;
-        _last_write_time = "Couldn't";
+        _last_write_time = "Wed Jul 00 00:00:00 0000";
     }
 
     try{

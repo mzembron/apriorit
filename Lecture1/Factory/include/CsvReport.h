@@ -14,10 +14,11 @@
 class CsvReport : public Report 
 {
     public:
-        std::string returnReport() const override;
-        void setReport(std::string content);
-    private:
-        std::string _report_content;
+        // std::string returnReport() const override;
+        std::string getType() const override;
+        // void setReport(std::string content);
+    // private:
+    //     std::string _report_content;
 };
 
 #endif // CSVREPORT_H
