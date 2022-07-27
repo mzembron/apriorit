@@ -1,6 +1,6 @@
 #include "TxtReportCreator.h"
 
-std::unique_ptr<Report> TxtReportCreator::factoryMethod(const std::vector<FileInfo>& files_parameters) const 
+std::unique_ptr<Report> TxtReportCreator::createReport(const std::vector<FileInfo>& files_parameters) const 
     {   
         std::string report_content = prepareContent(files_parameters);
         std::unique_ptr<TxtReport> txt_report(new TxtReport());

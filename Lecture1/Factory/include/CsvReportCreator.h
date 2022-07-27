@@ -13,7 +13,7 @@
 class CsvReportCreator : public ReportCreator
 {
     public:
-        std::unique_ptr<Report> factoryMethod(const std::vector<FileInfo>& files_parameters) const override;
+        std::unique_ptr<Report> createReport(const std::vector<FileInfo>& files_parameters) const override;
         
     private:
         std::string prepareContent(const std::vector<FileInfo>& files_parameters) const;

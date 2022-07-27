@@ -1,6 +1,6 @@
 #include "CsvReportCreator.h"
 
-std::unique_ptr<Report> CsvReportCreator::factoryMethod(const std::vector<FileInfo>& files_parameters) const 
+std::unique_ptr<Report> CsvReportCreator::createReport(const std::vector<FileInfo>& files_parameters) const 
     {   
         std::string report_content = prepareContent(files_parameters);
         std::unique_ptr<CsvReport> csv_report(new CsvReport());
