@@ -28,6 +28,7 @@ class FileInfo
         std::string _path;
         std::string _name;
         std::string _last_write_time;
+        bool _is_block_file;
 };
 
 #endif // FILEINFO_H

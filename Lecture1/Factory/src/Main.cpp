@@ -7,8 +7,9 @@
 
 namespace fs = std::filesystem;
 
-
-const std::string DIRECTORY_PATH = "/home/mateusz/apriorit/Lecture1/Factory";
+// running in a huge folder might take a while (for example in the directory home)
+// its more convinient to do it in small one - for example in project folder
+const std::string DIRECTORY_PATH = "/home/mateusz/apriorit";
 
 
 void getReports()

@@ -34,6 +34,16 @@ FileInfo::FileInfo(std::filesystem::directory_entry entry) :  _path(entry.path()
          _size = 0;
     }
 
+    try
+    {
+        _is_block_file = entry.is_block_file();
+    }
+    catch(std::exception& exception)
+    {
+        std::cout << "Cannot determine if: " << _name << " " << std::endl;
+        _is_block_file = false;
+    }
+
 }
 
 file_parameters FileInfo::getFileParameters() const
@@ -44,5 +54,6 @@ file_parameters FileInfo::getFileParameters() const
     file_info.push_back(file_descripion_param_pair("Size", 
         static_cast<std::stringstream>(std::stringstream() << _size).str() + " B"));
     file_info.push_back(file_descripion_param_pair("Last write time", _last_write_time));
+    file_info.push_back(file_descripion_param_pair("Is block file", (_is_block_file) ? "Yes" : "No"));
     return file_info;
 }
