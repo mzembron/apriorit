@@ -23,10 +23,10 @@ class ReportCreator
 {
     public:
         virtual ~ReportCreator(){};
-        virtual std::unique_ptr<Report> createReport(const std::vector<FileInfo>& files_parameters) const = 0;
         std::string generateReport(std::string dir_path) const;
     private:
         std::vector<FileInfo> getFilesParameters(std::string directory_path) const;
+        virtual std::unique_ptr<Report> createReport(const std::vector<FileInfo>& files_parameters) const = 0;
 };
 
 #endif // REPORTCREATOR_H

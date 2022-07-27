@@ -12,10 +12,8 @@
 
 class CsvReportCreator : public ReportCreator
 {
-    public:
-        std::unique_ptr<Report> createReport(const std::vector<FileInfo>& files_parameters) const override;
-        
     private:
+        std::unique_ptr<Report> createReport(const std::vector<FileInfo>& files_parameters) const override;
         std::string prepareContent(const std::vector<FileInfo>& files_parameters) const;
         std::string extractPrefix(const std::vector<FileInfo>& files_parameters) const;
 };
