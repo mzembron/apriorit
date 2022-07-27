@@ -4,8 +4,7 @@
 #include <string>
 
 /**
-* Trhe report interface declares the operations that all concrete reports
-* must implement
+* The report inteface
 */
 
 class Report

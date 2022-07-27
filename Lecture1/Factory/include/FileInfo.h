@@ -2,16 +2,21 @@
 #define FILEINFO_H
 #include <filesystem>
 #include <string>
+#include <iostream>
 #include <vector>
-#include <any>
-#include <variant>
 #include <chrono>
 #include <ctime>
 #include <sstream>
+#include <system_error>
+#include <exception>
+
 
 typedef std::pair<std::string, std::string> file_descripion_param_pair;
-// typedef std::vector<std::pair<std::string, std::any>> file_parameters;
 typedef std::vector<file_descripion_param_pair> file_parameters;
+
+/*
+* FileInfo class - contains and manages specific file parameters
+*/
 
 class FileInfo
 {

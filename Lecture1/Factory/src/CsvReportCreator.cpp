@@ -3,9 +3,9 @@
 std::unique_ptr<Report> CsvReportCreator::factoryMethod(const std::vector<FileInfo>& files_parameters) const 
     {   
         std::string report_content = prepareContent(files_parameters);
-        std::unique_ptr<TxtReport> txt_report(new TxtReport());
-        txt_report -> setReport(report_content);
-        return txt_report;
+        std::unique_ptr<CsvReport> csv_report(new CsvReport());
+        csv_report -> setReport(report_content);
+        return csv_report;
     }
 
 
